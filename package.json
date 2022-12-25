@@ -6,8 +6,8 @@
   "author": "Sofia Peturkina <peturkina@bk.ru>",
   "license": "MIT",
   "scripts": {
-    "start": "webpack-dev-server --mode development",
-    "build": "webpack --mode production",
+    "start": "webpack serve --config webpack.dev.js",
+    "build": "webpack --config webpack.prod.js",
     "lint": "eslint . --fix",
     "test": "jest --passWithNoTests",
     "coverage": "jest --coverage",
@@ -28,7 +28,9 @@
     "css-loader": "^6.7.3",
     "css-minimizer-webpack-plugin": "^4.2.2",
     "eslint": "^8.30.0",
+    "eslint-config-airbnb-base": "^15.0.0",
     "eslint-config-prettier": "^8.5.0",
+    "eslint-plugin-import": "^2.26.0",
     "eslint-plugin-jest": "^27.1.7",
     "eslint-plugin-prettier": "^4.2.1",
     "file-loader": "^6.2.0",
@@ -44,6 +46,7 @@
     "webpack-merge": "^5.8.0"
   },
   "dependencies": {
-    "core-js": "3"
+    "core-js": "3",
+    "push-dir": "^0.4.1"
   }
 }
